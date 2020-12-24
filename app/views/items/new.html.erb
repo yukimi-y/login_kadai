@@ -1,2 +1,6 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h1>読書情報を入力</h1>
+<%= form_with model: @item, local: true do |form| %>
+  <p><%= form.label :name, "タイトル" %> <%= form.text_field :name %></p>
+  <p><%= form.label :date, "読了日" %> <%= form.date_field :date %></p>
+  <%= form.submit "登録" %>
+<% end %>
