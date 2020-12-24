@@ -1,0 +1,8 @@
+<h1>読書記録</h1>
+<% if user_signed_in? %>
+  <% @items.each do |item| %>
+    <p><%= item.name %> : <%= item.date %></p>
+  <% end %>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>
