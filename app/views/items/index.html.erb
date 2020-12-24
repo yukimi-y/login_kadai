@@ -1,7 +1,7 @@
 <h1>読書記録</h1>
 <% if user_signed_in? %>
   <% @items.each do |item| %>
-    <p><%= item.name %> : <%= item.date %> : 会員No.<%= item.user.id %></p>
+    <p><%= item.name %> : <%= item.date %>  : <%= item.user.nickname.present? ? "読者【 #{item.user.nickname}】" : "会員No.#{item.user.id}" %></p>
   <% end %>
 <% else %>
   <p>ログインしてください</p>
